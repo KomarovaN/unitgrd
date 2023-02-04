@@ -16,4 +16,10 @@ public class CashbackHackServiceTest {
         CashbackHackService service = new CashbackHackService();
         Assertions.assertEquals(0, service.remain(1000));
     }
+
+    @Test
+    public void shouldNullIfAmountMoreBoundary() {
+        CashbackHackService service = new CashbackHackService();
+        Assertions.assertEquals(999, service.remain(1001));
+    }
 }
