@@ -9,3 +9,23 @@
 2. Выложить полученный проект на GitHub. Подключить GitHub Actions. 
 
 3. Если автотесты нашли баг — создать баг-репорт в GitHub Issue.
+
+## Часть 1. TestNG
+### Описание
+TestNG сравнительно неплохо документирован.
+
+[Ключевые аннотации](https://testng.org/doc/documentation-main.html#annotations).
+
+[Ключевые asserts](https://testng.org/doc/documentation-main.html#success-failure).
+
+Надо сделать ветку testng, в которой:
+
+1. Добавить в зависимости TestNG: в dependencies - testImplementation 'org.testng:testng:7.1.0', в test - useTestNG().
+2. Написать простые автотесты без параметризации на основании материала ветки main.
+
+### Особенности
+На этом уровне поменяется всего три вещи:
+
+1. Аннотация @Test должна иметь Fully Qualified Name org.testng.annotations.Test.
+2. Asserts расположены в классе org.testng.Assert. Обратите внимание: в TestNG принято actual, expected вместо expected, actual.
+3. Класс и тестовые методы должны иметь модификатор доступа public. Именно поэтому рекомендовали прописывать модификаторы в тестовых классах.
