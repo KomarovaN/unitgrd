@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 public class CashbackHackServiceTest {
 
     @Test
-    public void shouldRemainsIfAmountLess1000() {
+    public void shouldRemainsIfAmountLessBoundary() {
         CashbackHackService service = new CashbackHackService();
         Assertions.assertEquals(100, service.remain(900));
     }
 
     @Test
-    public void shouldNullIfAmount1000() {
+    public void shouldNullIfAmountBoundary() {
         CashbackHackService service = new CashbackHackService();
         Assertions.assertEquals(0, service.remain(1000));
     }
